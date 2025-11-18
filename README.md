@@ -21,6 +21,7 @@ A Xperience by Kentico integration for sending emails via Microsoft 365 / Exchan
 ### Other prerequisites
 
 - Azure App Registration with `Mail.Send` permission.
+- Administrators can configure [application access policy](https://learn.microsoft.com/en-us/exchange/permissions-exo/application-rbac) to limit app access to specific mailboxes and not to all the mailboxes in the organization, even if the app has been granted the Mail.Send application permission.
 
 ## Package Installation
 
