@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Kentico.Xperience.Exchange\Kentico.Xperience.Exchange.csproj" />
     <ProjectReference Include="..\..\src\Kentico.Xperience.Exchange\XperienceCommunity.Exchange.csproj" />
   </ItemGroup>
 
