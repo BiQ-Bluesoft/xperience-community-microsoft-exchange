@@ -2,9 +2,9 @@ name: "CI: Build and Test"
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, dev]
   push:
-    branches: [main]
+    branches: [main, dev]
 
 jobs:
   dotnet-format:
@@ -13,6 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
 
       - name: Run dotnet format
         run: dotnet format Kentico.Xperience.Exchange.sln --exclude ./examples/** --verify-no-changes

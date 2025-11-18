@@ -1,0 +1,67 @@
+name: Publish to GitHub Packages
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Package version'
+        required: true
+        type: string
+
+jobs:
+  publish:
+    name: Build and Publish NuGet Package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    defaults:
+      run:
+        shell: pwsh
+    
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      
+      - name: Restore dependencies
+        run: |
+          dotnet restore `
+            src/Kentico.Xperience.Exchange/XperienceCommunity.Exchange.csproj `
+            --locked-mode
+      
+      - name: Build
+        run: |
+          dotnet build `
+            src/Kentico.Xperience.Exchange/XperienceCommunity.Exchange.csproj `
+            --configuration Release `
+            --no-restore
+      
+      - name: Pack
+        run: |
+          $version = if ($env:VERSION_INPUT) { $env:VERSION_INPUT } else { $env:GITHUB_REF_NAME -replace '^v', '' }
+          dotnet pack `
+            src/Kentico.Xperience.Exchange/XperienceCommunity.Exchange.csproj `
+            --configuration Release `
+            --no-build `
+            --output ./artifacts `
+            /p:Version=$version
+        env:
+          VERSION_INPUT: ${{ github.event.inputs.version }}
+      
+      - name: Publish to GitHub Packages
+        run: |
+          dotnet nuget push ./artifacts/*.nupkg `
+            --source "https://nuget.pkg.github.com/BiQ-Bluesoft/index.json" `
+            --api-key ${{ secrets.GITHUB_TOKEN }} `
+            --skip-duplicate
