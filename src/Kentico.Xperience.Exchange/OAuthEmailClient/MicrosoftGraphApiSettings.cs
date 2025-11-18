@@ -1,4 +1,4 @@
-﻿namespace Kentico.Xperience.Exchange.OAuthSMTPClient;
+﻿namespace XperienceCommunity.Exchange.OAuthEmailClient;
 
 public class MicrosoftGraphApiSettings
 {

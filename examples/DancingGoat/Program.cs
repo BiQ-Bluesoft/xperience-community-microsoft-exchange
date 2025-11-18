@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+using CMS;
+using CMS.Base;
+using CMS.Core;
+using CMS.EmailEngine;
+
 using DancingGoat;
 using DancingGoat.EmailComponents;
 using DancingGoat.Helpers.Generators;
 using DancingGoat.Models;
-
-using CMS;
-using CMS.Base;
 
 using Kentico.Activities.Web.Mvc;
 using Kentico.Commerce.Web.Mvc;
@@ -17,16 +19,16 @@ using Kentico.EmailBuilder.Web.Mvc;
 using Kentico.Membership;
 using Kentico.OnlineMarketing.Web.Mvc;
 using Kentico.PageBuilder.Web.Mvc;
-using Kentico.Xperience.Mjml;
 using Kentico.Web.Mvc;
-
+using XperienceCommunity.Exchange;
+using Kentico.Xperience.Mjml;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.Routing;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -59,6 +61,10 @@ builder.Services.AddKentico(features =>
     features.UseActivityTracking();
     features.UseCommerce();
 });
+
+builder.Services.AddMSExchangeEmailSender(builder.Configuration);
+builder.Services.AddEmailQueueServices();
+
 
 builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 
