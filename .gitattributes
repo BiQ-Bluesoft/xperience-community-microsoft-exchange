@@ -1,32 +1,38 @@
 # Auto detect text files and perform LF normalization
 *                   text=auto
 
-*.cs                text diff=csharp
-*.cshtml            text diff=html
+# Source code files should use LF for consistency across platforms
+*.cs                text diff=csharp eol=lf
+*.cshtml            text diff=html eol=lf
 
-*.sln               text eol=crlf
-*.csproj            text eol=crlf
-*.vcproj            text eol=crlf
-*.sqlproj           text eol=crlf
-*.config            text eol=crlf
+# Project and configuration files should use LF
+*.sln               text eol=lf
+*.csproj            text eol=lf
+*.vcproj            text eol=lf
+*.sqlproj           text eol=lf
+*.config            text eol=lf
 
-*.xproj             text eol=crlf
-*.props             text eol=crlf
-*.filters           text eol=crlf
-*.vcxitems          text eol=crlf
+*.xproj             text eol=lf
+*.props             text eol=lf
+*.filters           text eol=lf
+*.vcxitems          text eol=lf
 
-*.yaml              text eol=crlf
-*.yml               text eol=crlf
+*.yaml              text eol=lf
+*.yml               text eol=lf
 
-*.css               text eol=crlf diff=css
-*.html              text eol=crlf diff=html
-*.js                text eol=crlf
-*.jsx               text eol=crlf
-*.ts                text eol=crlf
-*.tsx               text eol=crlf
+*.css               text eol=lf diff=css
+*.html              text eol=lf diff=html
+*.js                text eol=lf
+*.jsx               text eol=lf
+*.ts                text eol=lf
+*.tsx               text eol=lf
 
-package.json        text eol=crlf
-package-lock.json   text eol=crlf -diff
+package.json        text eol=lf
+package-lock.json   text eol=lf -diff
+
+# Windows-specific files can use CRLF
+*.bat               text eol=crlf
+*.cmd               text eol=crlf
 
 *.sql               linguist-detectable=true
 *.sql               linguist-language=sql
@@ -36,7 +42,7 @@ tsconfig.json       linguist-language=JSON-with-Comments
 *.webm              binary
 *.mp4               binary
 
-*.svg               text eol=crlf
+*.svg               text eol=lf
 *.ico               binary
 *.gif               binary
 *.pdf               binary
