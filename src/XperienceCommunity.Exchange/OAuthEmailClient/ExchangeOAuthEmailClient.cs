@@ -1,5 +1,6 @@
 ﻿using CMS.EmailEngine;
 
+using Microsoft.Extensions.Options;
 using Microsoft.Graph;
 using Microsoft.Graph.Models;
 using Microsoft.Graph.Users.Item.SendMail;
@@ -13,10 +14,10 @@ public class ExchangeOAuthEmailClient : IEmailClient
     protected readonly GraphServiceClient MicrosoftGraphClient;
     protected readonly string EmailAddress;
 
-    public ExchangeOAuthEmailClient(MicrosoftGraphClientFactory graphClientFactory)
+    public ExchangeOAuthEmailClient(GraphServiceClient graphClient, IOptions<MicrosoftGraphApiSettings> microsoftGraphOptions)
     {
-        EmailAddress = graphClientFactory.SendFromEmail;
-        MicrosoftGraphClient = graphClientFactory.GetClient();
+        EmailAddress = microsoftGraphOptions.Value.EmailFrom;
+        MicrosoftGraphClient = graphClient;
     }
 
     public virtual async Task<EmailSendResult> SendEmail(EmailMessage emailMessage, CancellationToken cancellationToken = default)

@@ -20,7 +20,7 @@ A Xperience by Kentico integration for sending emails via Microsoft 365 / Exchan
 
 ### Other prerequisites
 
-- Azure App Registration with `Mail.Send` permission.
+- Azure App Registration with `Mail.Send` [permission](https://learn.microsoft.com/en-us/graph/permissions-reference#mailsend).
 - Administrators can configure [application access policy](https://learn.microsoft.com/en-us/exchange/permissions-exo/application-rbac) to limit app access to specific mailboxes and not to all the mailboxes in the organization, even if the app has been granted the Mail.Send application permission.
 
 ## Package Installation
@@ -47,7 +47,6 @@ dotnet add package Xperience.Community.Exchange
    ```
 3. Register services in `Program.cs`:
    ```csharp
-   // Example - replace with actual extension method name
    builder.Services.AddMSExchangeEmailSender();
    ```
 
