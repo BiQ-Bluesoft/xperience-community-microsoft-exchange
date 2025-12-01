@@ -18,7 +18,7 @@ public static class ServiceRegistration
         string configurationSectionKey = "MicrosoftGraphApi")
     {
         services.Configure<MicrosoftGraphApiSettings>(configuration.GetSection(key: configurationSectionKey));
-        services.AddSingleton<GraphServiceClient>(sp =>
+        services.AddSingleton(sp =>
         {
             var microsoftOptions = sp.GetRequiredService<IOptions<MicrosoftGraphApiSettings>>().Value;
             return new GraphServiceClient(new ClientSecretCredential(
