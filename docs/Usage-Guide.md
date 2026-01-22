@@ -72,7 +72,7 @@ Instead of using `AddMSExchangeEmailSender`, manually register your custom imple
 
 ## Using a custom configuration section
 
-You can specify a different configuration section key name instead of the default `"MicrosoftGraphApi"`:
+You can specify a different configuration section key name instead of the default `"MicrosoftGraphApiEmailSender"`:
 
 ```csharp
 builder.Services.AddMSExchangeEmailSender(builder.Configuration, "MyCustomSection");

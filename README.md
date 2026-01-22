@@ -37,7 +37,7 @@ dotnet add package Xperience.Community.Exchange
 2. Add configuration to `appsettings.json`:
    ```json
    {
-     "MicrosoftGraphApi": {
+     "MicrosoftGraphApiEmailSender": {
        "TenantId": "<GUID>",
        "ClientId": "<GUID>",
        "ClientSecret": "<secret>",

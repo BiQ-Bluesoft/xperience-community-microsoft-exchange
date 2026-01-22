@@ -15,7 +15,7 @@ public static class ServiceRegistration
 {
     public static IServiceCollection AddMSExchangeEmailSender(this IServiceCollection services,
         IConfiguration configuration,
-        string configurationSectionKey = "MicrosoftGraphApi")
+        string configurationSectionKey = "MicrosoftGraphApiEmailSender")
     {
         services.Configure<MicrosoftGraphApiSettings>(configuration.GetSection(key: configurationSectionKey));
         services.AddSingleton(sp =>
