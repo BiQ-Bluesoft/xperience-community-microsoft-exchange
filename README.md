@@ -28,7 +28,7 @@ A Xperience by Kentico integration for sending emails via Microsoft 365 / Exchan
 Install from NuGet:
 
 ```powershell
-dotnet add package Xperience.Community.Exchange
+dotnet add package XperienceCommunity.Exchange
 ```
 
 ## Quick Start
