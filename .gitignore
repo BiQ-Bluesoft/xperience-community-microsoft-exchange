@@ -110,6 +110,9 @@ $RECYCLE.BIN/
 *.svclog
 *.nupkg
 
+# Build artifacts
+artifacts/
+
 # nodejs
 node_modules
 
