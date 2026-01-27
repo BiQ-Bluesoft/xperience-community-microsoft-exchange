@@ -8,8 +8,8 @@
 		<Version>1.0.0</Version>
 		<Authors>BiQ Bluesoft</Authors>
 		<Description>Microsoft Exchange OAuth email client for Kentico Xperience</Description>
-		<PackageProjectUrl>https://github.com/BiQ-Bluesoft/xperience-community-exchange-</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/BiQ-Bluesoft/xperience-community-exchange-</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/BiQ-Bluesoft/xperience-community-exchange</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/BiQ-Bluesoft/xperience-community-exchange</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
