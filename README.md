@@ -1,6 +1,6 @@
 # Xperience by Kentico: MS Exchange Email Integration
 
-[![CI: Build and Test](https://github.com/BiQ-Bluesoft/xperience-community-exchange-/actions/workflows/ci.yml/badge.svg)](https://github.com/BiQ-Bluesoft/xperience-community-exchange-/actions/workflows/ci.yml)
+[![CI: Build and Test](https://github.com/BiQ-Bluesoft/xperience-community-exchange/actions/workflows/ci.yml/badge.svg)](https://github.com/BiQ-Bluesoft/xperience-community-exchange/actions/workflows/ci.yml)
 
 ## Description
 
