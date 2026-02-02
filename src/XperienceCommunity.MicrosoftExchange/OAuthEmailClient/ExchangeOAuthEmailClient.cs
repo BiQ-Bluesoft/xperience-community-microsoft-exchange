@@ -5,9 +5,9 @@ using Microsoft.Graph;
 using Microsoft.Graph.Models;
 using Microsoft.Graph.Users.Item.SendMail;
 
-using XperienceCommunity.Exchange.Helpers;
+using XperienceCommunity.MicrosoftExchange.Helpers;
 
-namespace XperienceCommunity.Exchange.OAuthEmailClient;
+namespace XperienceCommunity.MicrosoftExchange.OAuthEmailClient;
 
 public class ExchangeOAuthEmailClient : IEmailClient
 {

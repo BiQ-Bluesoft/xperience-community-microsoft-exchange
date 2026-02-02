@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\XperienceCommunity.Exchange\XperienceCommunity.Exchange.csproj" />
+    <ProjectReference Include="..\..\src\XperienceCommunity.MicrosoftExchange\XperienceCommunity.MicrosoftExchange.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1449,7 +1449,7 @@
           "System.IO.Hashing": "8.0.0"
         }
       },
-      "xperiencecommunity.exchange": {
+      "xperiencecommunity.microsoftexchange": {
         "type": "Project",
         "dependencies": {
           "Kentico.Xperience.Admin": "[30.12.0, )",

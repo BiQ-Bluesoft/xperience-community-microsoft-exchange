@@ -2,9 +2,9 @@
 
 	<PropertyGroup>
 		<!-- Package metadata -->
-		<Product>Xperience by Kentico Exchange</Product>
+		<Product>Xperience by Kentico Microsoft Exchange</Product>
 		<Title>$(Product)</Title>
-		<PackageId>XperienceCommunity.Exchange</PackageId>
+		<PackageId>XperienceCommunity.MicrosoftExchange</PackageId>
 		<Version>1.0.0</Version>
 		<Authors>BiQ Bluesoft</Authors>
 		<Description>Microsoft Exchange OAuth email client for Kentico Xperience</Description>

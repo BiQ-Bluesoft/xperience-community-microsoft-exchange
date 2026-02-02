@@ -55,9 +55,9 @@ To demonstrate the functionality on the Dancing Goat page, it is neccessary to c
    - `refactor/` - for restructuring of existing features
    - `fix/` - for bugfixes
 
-1. Run `dotnet format` against the `XperienceCommunity.Exchange` solution
+1. Run `dotnet format` against the `XperienceCommunity.MicrosoftExchange` solution
 
-   > use `.NET: format (Exchange)` VS Code task.
+   > use `.NET: format (Microsoft Exchange)` VS Code task.
 
 1. Commit changes, with a commit message preferably following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) convention.
 
