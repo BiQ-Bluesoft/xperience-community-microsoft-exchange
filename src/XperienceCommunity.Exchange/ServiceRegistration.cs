@@ -13,7 +13,7 @@ namespace XperienceCommunity.Exchange;
 
 public static class ServiceRegistration
 {
-    public static IServiceCollection AddMSExchangeEmailSender(this IServiceCollection services,
+    public static IServiceCollection AddMicrosoftExchangeEmailSender(this IServiceCollection services,
         IConfiguration configuration,
         string configurationSectionKey = "MicrosoftGraphApiEmailSender")
     {

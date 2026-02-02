@@ -62,7 +62,7 @@ builder.Services.AddKentico(features =>
     features.UseCommerce();
 });
 
-builder.Services.AddMSExchangeEmailSender(builder.Configuration);
+builder.Services.AddMicrosoftExchangeEmailSender(builder.Configuration);
 builder.Services.AddEmailQueueServices();
 
 

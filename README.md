@@ -1,4 +1,4 @@
-# Xperience by Kentico: MS Exchange Email Integration
+# Xperience by Kentico: Microsoft Exchange Email Integration
 
 [![CI: Build and Test](https://github.com/BiQ-Bluesoft/xperience-community-exchange/actions/workflows/ci.yml/badge.svg)](https://github.com/BiQ-Bluesoft/xperience-community-exchange/actions/workflows/ci.yml)
 
@@ -47,7 +47,7 @@ dotnet add package XperienceCommunity.Exchange
    ```
 3. Register services in `Program.cs`:
    ```csharp
-   builder.Services.AddMSExchangeEmailSender();
+   builder.Services.AddMicrosoftExchangeEmailSender();
    ```
 
 ## Full Instructions

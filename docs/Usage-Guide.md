@@ -67,7 +67,7 @@ After creating your custom email client, register it in `Program.cs`:
 
 #### Replace the default registration
 
-Instead of using `AddMSExchangeEmailSender`, manually register your custom implementation:
+Instead of using `AddMicrosoftExchangeEmailSender`, manually register your custom implementation:
 
 
 ## Using a custom configuration section
@@ -75,5 +75,5 @@ Instead of using `AddMSExchangeEmailSender`, manually register your custom imple
 You can specify a different configuration section key name instead of the default `"MicrosoftGraphApiEmailSender"`:
 
 ```csharp
-builder.Services.AddMSExchangeEmailSender(builder.Configuration, "MyCustomSection");
+builder.Services.AddMicrosoftExchangeEmailSender(builder.Configuration, "MyCustomSection");
 ```
