@@ -23,7 +23,7 @@ Here's an example showing how to extend the email client to support attachments:
 ```csharp
 using CMS.EmailEngine;
 using Microsoft.Graph.Models;
-using XperienceCommunity.Exchange.OAuthEmailClient;
+using XperienceCommunity.MicrosoftExchange.OAuthEmailClient;
 
 namespace YourProject.Email;
 

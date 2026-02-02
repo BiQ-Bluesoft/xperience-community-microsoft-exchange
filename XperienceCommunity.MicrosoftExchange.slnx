@@ -15,9 +15,9 @@
     <File Path="Directory.Packages.props" />
   </Folder>
   <Folder Name="/src/">
-    <Project Path="src/XperienceCommunity.Exchange/XperienceCommunity.Exchange.csproj" />
+    <Project Path="src/XperienceCommunity.MicrosoftExchange/XperienceCommunity.MicrosoftExchange.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="tests/XperienceCommunity.Exchange.Tests/XperienceCommunity.Exchange.Tests.csproj" />
+    <Project Path="tests/XperienceCommunity.MicrosoftExchange.Tests/XperienceCommunity.MicrosoftExchange.Tests.csproj" />
   </Folder>
 </Solution>

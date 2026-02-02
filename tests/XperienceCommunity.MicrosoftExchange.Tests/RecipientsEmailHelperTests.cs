@@ -1,6 +1,6 @@
-using XperienceCommunity.Exchange.Helpers;
+using XperienceCommunity.MicrosoftExchange.Helpers;
 
-namespace XperienceCommunity.Exchange.Tests;
+namespace XperienceCommunity.MicrosoftExchange.Tests;
 
 [TestFixture]
 public class RecipientsEmailHelperTests

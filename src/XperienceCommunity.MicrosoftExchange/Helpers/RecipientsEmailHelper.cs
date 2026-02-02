@@ -1,6 +1,6 @@
 ﻿using Microsoft.Graph.Models;
 
-namespace XperienceCommunity.Exchange.Helpers;
+namespace XperienceCommunity.MicrosoftExchange.Helpers;
 
 public static class RecipientsEmailHelper
 {

@@ -1,4 +1,4 @@
-﻿namespace XperienceCommunity.Exchange.OAuthEmailClient;
+﻿namespace XperienceCommunity.MicrosoftExchange.OAuthEmailClient;
 
 public class MicrosoftGraphApiSettings
 {

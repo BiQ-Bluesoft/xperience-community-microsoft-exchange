@@ -7,9 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.Graph;
 
-using XperienceCommunity.Exchange.OAuthEmailClient;
+using XperienceCommunity.MicrosoftExchange.OAuthEmailClient;
 
-namespace XperienceCommunity.Exchange;
+namespace XperienceCommunity.MicrosoftExchange;
 
 public static class ServiceRegistration
 {

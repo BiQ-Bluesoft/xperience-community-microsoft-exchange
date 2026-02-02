@@ -20,7 +20,7 @@ using Kentico.Membership;
 using Kentico.OnlineMarketing.Web.Mvc;
 using Kentico.PageBuilder.Web.Mvc;
 using Kentico.Web.Mvc;
-using XperienceCommunity.Exchange;
+using XperienceCommunity.MicrosoftExchange;
 using Kentico.Xperience.Mjml;
 
 using Microsoft.AspNetCore.Builder;
