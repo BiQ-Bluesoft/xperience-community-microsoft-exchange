@@ -39,13 +39,13 @@ jobs:
       - name: Restore dependencies
         run: |
           dotnet restore `
-            src/XperienceCommunity.Exchange/XperienceCommunity.Exchange.csproj `
+            src/XperienceCommunity.MicrosoftExchange/XperienceCommunity.MicrosoftExchange.csproj `
             --locked-mode
       
       - name: Build
         run: |
           dotnet build `
-            src/XperienceCommunity.Exchange/XperienceCommunity.Exchange.csproj `
+            src/XperienceCommunity.MicrosoftExchange/XperienceCommunity.MicrosoftExchange.csproj `
             --configuration Release `
             --no-restore
       
@@ -59,7 +59,7 @@ jobs:
             "1.0.0-ci.$($env:GITHUB_RUN_NUMBER)" 
           }
           dotnet pack `
-            src/XperienceCommunity.Exchange/XperienceCommunity.Exchange.csproj `
+            src/XperienceCommunity.MicrosoftExchange/XperienceCommunity.MicrosoftExchange.csproj `
             --configuration Release `
             --no-build `
             --output ./artifacts `
